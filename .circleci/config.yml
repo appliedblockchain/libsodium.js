@@ -1,0 +1,16 @@
+version: 2.1
+
+jobs:
+  build:
+    docker:
+      - image: emscripten/emsdk:2.0.2
+    steps:
+      - checkout
+      - run:
+          name: "Make"
+          command: "make"
+
+workflows:
+  build:
+    jobs:
+      - build
