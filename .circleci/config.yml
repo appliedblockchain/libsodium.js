@@ -9,6 +9,8 @@ jobs:
       - run:
           name: "Make"
           command: "make"
+      - store_artifacts:
+          path: ~/project/dist
 
 workflows:
   build:
